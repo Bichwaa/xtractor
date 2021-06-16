@@ -20,7 +20,12 @@ def strip_tags(text):
     return pattern.sub('',text)
 
 
-def extract(path_to_xml):
+def extract(path_to_xml, destination=""):
     t = get_text(filepath = path_to_xml)
     stripped = strip_tags(t)
     print(stripped)
+    if destination != "": #if a destination for extracted text file is provided
+        f = open(destination+"\\recovered.txt", "a")
+        f.write(stripped)
+        f.close()
+    return stripped

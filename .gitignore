@@ -12,3 +12,5 @@ Iinclude/
 Lib/
 
 Scripts/
+
+*.docx
